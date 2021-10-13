@@ -1,0 +1,20 @@
+<p>listado works!</p>
+
+<div *ngIf="hereoBorrado; else noBorrado">
+    <h3>Hereo borrado:  <small> {{ hereoBorrado }} </small></h3>
+</div>
+
+<ng-template #noBorrado>
+    <h3>No ha borrado nada</h3>
+</ng-template>
+
+
+<button (click)="borrarHereo()">Borrar</button>
+
+<ul>
+    <li *ngFor="let hereo  of hereos; let i= index">
+      {{i + 1}} {{ hereo }}
+    </li>
+</ul>
+
+
